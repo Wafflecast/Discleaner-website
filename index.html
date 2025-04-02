@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dis-Cleaner | Keep Discord Safe</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: #0a0a0a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            overflow-y: auto;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* Static Futuristic Grid Background */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%; /* Adjusted height to be less extreme */
+            background: radial-gradient(circle, rgba(0, 255, 170, 0.2) 0%, rgba(0, 0, 0, 0.9) 80%),
+                        repeating-linear-gradient(0deg, rgba(0, 255, 170, 0.1) 0px, rgba(0, 255, 170, 0.1) 1px, transparent 1px, transparent 20px), /* Smaller grid lines */
+                        repeating-linear-gradient(90deg, rgba(0, 255, 170, 0.1) 0px, rgba(0, 255, 170, 0.1) 1px, transparent 1px, transparent 20px); /* Smaller grid lines */
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header {
+            margin-top: 10vh;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #00ffaa;
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .cta-button:hover {
+            background: #00cc88;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            width: 250px;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .staff, .about {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            width: 90%;
+            max-width: 350px;
+            margin-top: 50px;
+        }
+
+        .about p {
+            text-align: left;
+        }
+
+        .avatar {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        footer a {
+            color: #00ffaa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #00cc88;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+            }
+
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dis-Cleaner</h1>
+        <p>Protecting Discord, One Server at a Time.</p>
+        <a href="https://discord.com/oauth2/authorize?client_id=1344390761784934450&permissions=8&integration_type=0&scope=bot" class="cta-button" target="_blank">Invite the Bot</a>
+    </header>
+    
+    
+    <section class="features">
+        <div class="feature">
+            <h2>Advanced Moderation</h2>
+            <p>Automatically detects and removes harmful content.</p>
+        </div>
+        <div class="feature">
+            <h2>Real-Time Protection</h2>
+            <p>Constantly scanning and safeguarding your community.</p>
+        </div>
+        <div class="feature">
+            <h2>Easy to Use</h2>
+            <p>Simple setup and seamless integration with your server.</p>
+        </div>
+    </section>
+    
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Dis-Cleaner is dedicated to keeping Discord communities safe from harmful content and individuals. Our goal is to provide real-time moderation and an easy-to-use bot that integrates seamlessly into your server, ensuring peace of mind for all members.</p>
+    </section>
+    
+    <section class="staff">
+        <h2>Meet the Staff</h2>
+        <img class="avatar" src="https://cdn.discordapp.com/avatars/667713337424871450/68ac04fe004dc20409ab068e445b8aee.webp" alt="Waffle Avatar">
+        <p><strong>Waffle</strong> - Founder & CEO</p>
+        <p><strong>About Me:</strong> I'm Waffle, the CEO of Dis-Cleaner. I created this bot to help keep Discord safe for everyone. With a passion for tech and security, I aim to ensure that Discord remains a fun and secure space for all users.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Dis-Cleaner. All rights reserved.</p>
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> | 
+            <a href="terms-of-service.html">Terms of Service</a>| 
+            <a href="index.html">Home</a>
+        </p>
+    </footer>
+</body>
+</html>
