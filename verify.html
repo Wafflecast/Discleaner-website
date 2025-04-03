@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dis-Cleaner | Verification</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: #0a0a0a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            overflow-y: auto;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* Static Futuristic Grid Background */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%; /* Adjusted height to be less extreme */
+            background: radial-gradient(circle, rgba(0, 255, 170, 0.2) 0%, rgba(0, 0, 0, 0.9) 80%),
+                        repeating-linear-gradient(0deg, rgba(0, 255, 170, 0.1) 0px, rgba(0, 255, 170, 0.1) 1px, transparent 1px, transparent 20px), /* Smaller grid lines */
+                        repeating-linear-gradient(90deg, rgba(0, 255, 170, 0.1) 0px, rgba(0, 255, 170, 0.1) 1px, transparent 1px, transparent 20px); /* Smaller grid lines */
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header {
+            margin-top: 10vh;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #00ffaa;
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .cta-button:hover {
+            background: #00cc88;
+        }
+
+        .status-message {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        footer a {
+            color: #00ffaa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #00cc88;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dis-Cleaner</h1>
+        <p>Verification Process</p>
+    </header>
+    
+    <div class="status-message" id="status">
+        Verifying... Please wait...
+    </div>
+
+    <script>
+        // Wait for the page to load and capture the OAuth code
+        window.onload = function() {
+            // Get URL query parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');  // This is the OAuth 'code' received
+
+            // Simulate the verification process (checking code)
+            if (code) {
+                document.getElementById('status').innerHTML = "Verification complete! Redirecting back to Discord...";
+
+                // Simulate a delay and then redirect to Discord
+                setTimeout(function() {
+                    window.location.href = "https://discord.com/channels/@me"; // This is the URL to send the user back to Discord
+                }, 5000); // 5 seconds delay (adjust as needed)
+            } else {
+                document.getElementById('status').innerHTML = "Verification failed. No authorization code received.";
+            }
+        };
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Dis-Cleaner. All rights reserved.</p>
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> | 
+            <a href="terms-of-service.html">Terms of Service</a> | 
+            <a href="index.html">Home</a>
+        </p>
+    </footer>
+</body>
+</html>
